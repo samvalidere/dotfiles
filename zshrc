@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+#Path to your oh-my-zsh installation.
 export ZSH=/Users/sam/.oh-my-zsh
 
 # Oh My Zsh Config
@@ -9,17 +9,18 @@ ENABLE_CORRECTION="true"
 ZSH_DISABLE_COMPFIX=true
 plugins=(brew bundler docker docker-compose gem git node npm macos poetry rake ruby tmux tmuxinator vi-mode web-search xcode mix-fast)
 
-export PATH="$HOME/.bin:$HOME/Library/Android/sdk/platform-tools:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin/terraform:$HOME/.poetry/bin:$HOME/.asdf/bin"
+export PATH="$HOME/.bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.bin/terraform:$HOME/.poetry/bin:$HOME/.asdf/bin"
 fpath+=~/.zfunc
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.asdf/completions/asdf.bash
+# source $HOME/.asdf/completions/asdf.bash
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 RPROMPT="%{%f%b%k%}$(build_right_prompt)"
 setopt promptsubst
 
 # gcloud autocompletions
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+# source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # Set default ruby version
 export EDITOR='nvim'
@@ -97,5 +98,6 @@ alias mux="tmuxinator"
 
 autoload -U +X bashcompinit && bashcompinit
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 complete -o nospace -C /Users/sam/.asdf/installs/terraform/1.0.1/bin/terraform terraform
 source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
