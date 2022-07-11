@@ -11,11 +11,15 @@ cd ~/.vim/bundle/seoul256.vim
 git pull origin master
 cd ~/.vim/bundle
 
+git clone https://github.com/junegunn/fzf.git
+cd ~/.vim/bundle/fzf
+git pull origin master
+cd ~/.vim/bundle
+
 git clone https://github.com/junegunn/fzf.vim.git
 cd ~/.vim/bundle/fzf.vim
 git pull origin master
 cd ~/.vim/bundle
-ln -s /usr/local/opt/fzf ~/.vim/bundle/fzf
 
 git clone https://github.com/airblade/vim-gitgutter.git
 cd ~/.vim/bundle/vim-gitgutter

@@ -87,6 +87,7 @@ alias pull='git pull origin'
 alias pap='pull && git fetch && git remote prune origin'
 alias glog="git log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'"
 alias shove='git push -f --tags origin'
+alias sync='git pull upstream staging'
 
 # Docker
 alias stop_docker='docker stop $(docker ps -aq)'

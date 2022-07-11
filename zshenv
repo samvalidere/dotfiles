@@ -79,6 +79,10 @@ function end_feature2() {
   git checkout main ; git pull origin main ; git branch -d $1 ; git remote prune origin
 }
 
+function end_feature3() {
+  git checkout staging ; git pull origin staging ; git branch -d $1 ; git remote prune origin
+}
+
 function super_commit() {
   git add . ; git commit -S -v ; git push origin $1
 }

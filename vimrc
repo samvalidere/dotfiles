@@ -22,6 +22,7 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set background=dark
 set hidden
+set runtimepath+=~/usr/homebrew/opt/fzf
 set runtimepath+=~/.vim/bundle/LanguageClient-neovim
 
 let mapleader = "_"
