@@ -13,3 +13,11 @@ What was changed
 # 50-character subject line
 #
 # 72-character wrapped longer description.
+#
+# Features (feat:)
+# Bug Fixes (fix:)
+# Documentation (doc:)
+# Performance (perf:)
+# Refactor (refactor:)
+# Styling (style:)
+# Test (test:)
