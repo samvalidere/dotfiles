@@ -90,7 +90,6 @@ alias shove='git push -f --tags origin'
 alias sync='git pull upstream staging'
 
 # Docker
-alias docker='podman'
 alias stop_docker='docker stop $(docker ps -aq)'
 alias rm_docker='docker rm $(docker ps -aq)'
 alias rmi_docker='docker rmi $(docker images -aq)'
