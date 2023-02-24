@@ -68,6 +68,10 @@ let g:LanguageClient_serverCommands = {
 
 let g:terraform_fmt_on_save=1
 
+au BufRead,BufNewFile *.ex,*.exs set filetype=elixir
+au BufRead,BufNewFile *.eex,*.heex,*.leex,*.sface,*.lexs set filetype=eelixir
+au BufRead,BufNewFile mix.lock set filetype=elixir
+
 " Mappings for the language client
 nnoremap <Leader>5 :call LanguageClient_contextMenu()<CR>
 nnoremap <silent>K :call LanguageClient#textDocument_hover()<CR>
